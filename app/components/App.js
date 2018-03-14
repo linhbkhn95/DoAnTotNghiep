@@ -17,6 +17,7 @@ var DashBoard  = require('app/components/pages/dashboard/DashBoard.js')
 var SlideMenu =  require('app/components/SlideMenuBar.js');
 var Login = require('app/components/Login.js');
 var UserHome = require('./UserHome');
+import Maptree from './MapTree'
  class App extends React.Component{
 
 // require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
@@ -33,7 +34,8 @@ var UserHome = require('./UserHome');
                    <Switch>
                     
                       <Route  exact   path="/" component={Home}/>
-                     
+                      <Route  path="/maptree" component={Maptree}/>
+
                       <Route  path="/eventLog" component={EventLog}/>
                       <Route  path="/dashboard" component={DashBoard}/>
                       <Route  path="/login" component={Login}/>

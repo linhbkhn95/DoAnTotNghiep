@@ -25,14 +25,15 @@ module.exports = function notFound (data, options) {
   var sails = req._sails;
 
   // Set status code
-  res.status(404);
+  // res.status(404);
 
   // Log error to console
   if (data !== undefined) {
-    sails.log.verbose('Sending 404 ("Not Found") response: \n',data);
+    sails.log.verbose('Sending homepage/404 ("Not Found") response: \n',data);
   }
-  else sails.log.verbose('Sending 404 ("Not Found") response');
-
+  else sails.log.verbose('Data undefined, Sending homepage/404 ("Not Found") response');
+  // Hardcode to prevent error 404.
+  return res.view('homepage');
   // Only include errors in response if application environment
   // is not set to 'production'.  In production, we shouldn't
   // send back any identifying information about errors.

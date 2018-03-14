@@ -25,7 +25,7 @@ import PropTypes from 'prop-types';
 import Menu from 'material-ui/Menu';
 
 
-
+import MenuDemo from './MapTree'
 import Divider from 'material-ui/Divider';
 
 
@@ -188,8 +188,8 @@ import Divider from 'material-ui/Divider';
                   <ChevronLeftIcon />
            	 </IconButton>
             </div>
-          	  <MenuSlide />
-             
+          	  {/* <MenuSlide /> */}
+              <MenuDemo />
         </Drawer>
       </div>
     );

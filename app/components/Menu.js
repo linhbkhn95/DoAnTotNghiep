@@ -87,7 +87,7 @@ import Toggle from 'material-ui/Toggle';
  	render() {
 	    return (
 	    	   <List>
-          		  <Subheader style={{backgroundColor:"#00bcd4",fontWeight:"bold",color:"white"}}><Link style={{color:"white"}} to="/dashboard">WebAsistant</Link></Subheader>
+          		  <Subheader style={{backgroundColor:"#00bcd4",fontWeight:"bold",color:"white"}}><Link style={{color:"white"}} to="/dashboard">BKTree</Link></Subheader>
                    {this.state.list.map((item,index)=>{
                    	 return(
 	                   	      <ListItem key={index} style={{fontSize:"11px",fontWeight:"bold",    color: "rgb(0, 150, 136)"}} primaryText={item.text}  containerElement={ <Link to={item.url} />}  leftIcon={item.icon } />

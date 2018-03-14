@@ -23,11 +23,11 @@ class Layout extends React.Component{
          )
      }
 }
-module.exports = connect(function(state){
-  return{
-    background:state.settings.backgroupBody
-  };
-})(Layout);
+module.exports =
+
+    // background:state.settings.backgroupBody
+
+Layout;
   // <div className="container">
                   
   //                       <div className="row">
