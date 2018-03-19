@@ -1,34 +1,3 @@
-// import React from 'react'
-// import  { Map , TileLayer, Marker, Popup } from  'react-leaflet'
-
-// class SimpleExample extends React.Component {
-//   constructor() {
-//     super()
-//     this.state = {
-//       lat: 51.505,
-//       lng: -0.09,
-//       zoom: 13
-//     }
-//   }
-
-//   render() {
-//     const position = [this.state.lat, this.state.lng];
-//     return (
-//       <Map center={position} zoom={this.state.zoom}>
-//         <TileLayer
-//           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-//           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-//         />
-//         <Marker position={position}>
-//           <Popup>
-//             <span>A pretty CSS3 popup. <br/> Easily customizable.</span>
-//           </Popup>
-//         </Marker>
-//       </Map>
-//     );
-//   }
-// }
-// module.exports = SimpleExample
 
 
 import React from 'react';
@@ -48,8 +17,9 @@ import Update from 'material-ui-icons/Update';
 import Notifications from 'material-ui-icons/Notifications';
 import Book from 'material-ui-icons/Book';
 
-
-
+import Badge from 'material-ui/Badge';
+import IconButton from 'material-ui/IconButton';
+import NotificationsIcon from 'material-ui/svg-icons/social/notifications';
 import RaisedButton from 'material-ui/RaisedButton';
 
 export default class ListExampleNested extends React.Component {
@@ -113,7 +83,10 @@ export default class ListExampleNested extends React.Component {
             <Subheader>Thao tác</Subheader>   
             <ListItem primaryText="Quản lý cây" leftIcon={<Assignment />} />
             <ListItem primaryText="Cập nhật bản đồ" leftIcon={<Update />} />
-            <ListItem primaryText="Thông báo" leftIcon={<Notifications />} />
+            <ListItem primaryText="Thông báo" leftIcon={<Badge  style={{top: "-22px", left: "-8px"}}
+      badgeContent={4}
+      primary={true}
+    ><Notifications />  </Badge>} />
             <ListItem primaryText="Thống kê/Báo cáo" leftIcon={<Book />} />
 
               {/* <ListItem

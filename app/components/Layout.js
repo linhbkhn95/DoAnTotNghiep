@@ -14,8 +14,14 @@ class Layout extends React.Component{
                       		  <Nav />
                         </div>
                        
-		                      <div style={{paddingLeft:"0px",paddingRight:"0px",background:this.props.background}} className="col-md-12" >
-		                          {this.props.children}
+		                      <div style={{paddingLeft:"0px",paddingRight:"0px",background:this.props.background}} className="container " >
+                                {/* <div className="title-page">
+                                     Thêm nhân viên
+                                    
+                                </div> */}
+                                 <div className="">
+                                  {this.props.children}
+                                 </div>
 		                       </div>
 		               
                </div>

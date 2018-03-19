@@ -1,28 +1,37 @@
 body{ background: #fff;}
 
 /*Ipad ngang(1024 x 768)*/
-@media screen and (max-width: 1300px){
+@media screen and (min-width: 1300px){
     /*body{ background: red;}*/
      .recharts-wrapper{
         overflow-x: scroll;
       width: auto !important;
 
     }
+    .content-web{
+        text-align: center !important
+    }
 }
-@media screen and (max-width: 1024px){
+@media screen and (min-width: 1024px){
     /*body{ background: black;}*/
     .recharts-wrapper{
         overflow-x: scroll;
         width: auto !important;
     }
+    .content-web{
+        text-align: center !important
+    }
 }
 /*Ipad dọc(768 x 1024)*/
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px){
     /*body{ background: red;}*/
      .recharts-wrapper{
         overflow-x: scroll;
       width: auto !important;
 
+    }
+    .content-web{
+        text-align: none !important
     }
 }
 
@@ -71,4 +80,11 @@ body{ background: #fff;}
         overflow-y: inherit !important;
     }
    
+}
+
+
+@media (min-width: 1200px){
+        .container {
+            width: 1170px;
+        }
 }
