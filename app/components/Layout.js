@@ -4,6 +4,7 @@ var Nav = require('./Nav.js');
 var Menu = require('./Menu.js');
 var React = require('react');
 var {connect} = require('react-redux');
+import ListFriend from './ListFriend'
 class Layout extends React.Component{
        render(){
          console.log(this.props.background)
@@ -12,6 +13,7 @@ class Layout extends React.Component{
                   
                         <div className="row">
                       		  <Nav />
+                            {/* <ListFriend /> */}
                         </div>
                        
 		                      <div style={{paddingLeft:"0px",paddingRight:"0px",background:this.props.background}} className="container " >

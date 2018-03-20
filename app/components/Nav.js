@@ -27,7 +27,7 @@ import Menu from 'material-ui/Menu';
 
 import MenuDemo from './MapTree'
 import Divider from 'material-ui/Divider';
-
+import ListChat from './ListChat'
 
  import { createStore } from 'redux';
 
@@ -190,6 +190,8 @@ import Divider from 'material-ui/Divider';
             </div>
           	  {/* <MenuSlide /> */}
               <MenuDemo />
+              <Divider />
+              <ListChat />
         </Drawer>
       </div>
     );

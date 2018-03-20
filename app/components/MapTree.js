@@ -21,7 +21,7 @@ import Badge from 'material-ui/Badge';
 import IconButton from 'material-ui/IconButton';
 import NotificationsIcon from 'material-ui/svg-icons/social/notifications';
 import RaisedButton from 'material-ui/RaisedButton';
-
+import {NavLink} from 'react-router-dom'
 export default class ListExampleNested extends React.Component {
 
   state = {
@@ -52,7 +52,7 @@ export default class ListExampleNested extends React.Component {
    {/* <div className="icon-username"><AccountCircle /> </div> */}
                 {/* <div className="user-name">Trịn Đức Bảo Linh </div> */}
         <div className="col-md-12 menu">
-        <div className="header-menu">BKTree</div>
+        <div className="header-menu"><NavLink to="/">BKTree</NavLink></div>
         <div className="account-menu">
          
             <div className="user-avatar">

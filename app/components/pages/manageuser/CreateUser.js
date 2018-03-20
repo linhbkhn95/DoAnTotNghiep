@@ -3,11 +3,18 @@ import TextField from 'material-ui/TextField';
 import {orange500, blue500} from 'material-ui/styles/colors';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
+import DatePicker from 'material-ui/DatePicker';
 
 
 class CreateUSer extends React.Component{
     constructor(props){
         super(props);
+        const minDate = new Date();
+    const maxDate = new Date();
+    minDate.setFullYear(minDate.getFullYear() - 1);
+    minDate.setHours(0, 0, 0, 0);
+    maxDate.setFullYear(maxDate.getFullYear() + 1);
+    maxDate.setHours(0, 0, 0, 0);
         this.state={
              data:{
                 address:{
@@ -30,9 +37,31 @@ class CreateUSer extends React.Component{
                     value:null
 
                 },
+                minDate: minDate,
+                maxDate: maxDate,
+                autoOk: false,
+                disableYearSelection: false,
              }
         }
     }
+    handleChangeMinDate = (event, date) => {
+        this.setState({
+          minDate: date,
+        });
+      };
+    
+      handleChangeMaxDate = (event, date) => {
+        this.setState({
+          maxDate: date,
+        });
+      };
+    
+      handleToggle = (event, toggled) => {
+        this.setState({
+          [event.target.name]: toggled,
+        });
+      };
+    
     onChange(type,event,index,value) {
         if(!value){
             this.state.data[type].value = event.target.value
@@ -74,7 +103,7 @@ class CreateUSer extends React.Component{
       floatingLabelStyle={styles.floatingLabelStyle}
       floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
     /> */}
-    <div className="" >
+    <div className="col-md-6" >
                      <TextField
                           errorText={this.state.data.username.errorText}
                           required={true} 
@@ -110,6 +139,43 @@ class CreateUSer extends React.Component{
                     //   ref="password"
                     //   type="password"
                     /><br />
+                    </div>
+                    <div className="col-md-6" >
+                     <TextField
+                          errorText={this.state.data.username.errorText}
+                          required={true} 
+                          hintText="Số chứng minh thư nhân dân"
+                        //   ref="username"
+                          onChange={this.onChange.bind(this,'cmtnd')}
+                          floatingLabelText="Số chứng minh thư nhân dân"
+                    /><br />
+                   <TextField
+                          errorText={this.state.data.fullname.errorText}
+                          required={true} 
+                          hintText="Số điện thoại liên hệ"
+                        //   ref="username"
+                          onChange={this.onChange.bind(this,'fullname')}
+                          floatingLabelText="Số điện thoại liên hệ"
+                    /><br />
+                    <SelectField
+                            floatingLabelText="Chức vụ"
+                            value={this.state.data.sex.value}
+                            onChange={this.onChange.bind(this,'sex')}
+                            >
+                            <MenuItem value={null} primaryText="" />
+                            <MenuItem value='nv' primaryText="Nhân viên tưới cây" />
+                            <MenuItem value='ql' primaryText="Quản lý" />
+                            <MenuItem value='bv' primaryText="Bảo vệ" />
+
+                            </SelectField>
+                    <br />
+                    <DatePicker
+          floatingLabelText="Ngày sinh"
+          autoOk={this.state.autoOk}
+          minDate={this.state.minDate}
+          maxDate={this.state.maxDate}
+          disableYearSelection={this.state.disableYearSelection}
+        /><br />
                     </div>
                     
   </div>
