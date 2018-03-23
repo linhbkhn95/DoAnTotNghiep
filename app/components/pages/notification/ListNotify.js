@@ -77,8 +77,7 @@ const ListExampleMessages = () => (
             <p>
               <span style={{color: darkBlack}}>Nguyễn Xuân</span> --
                vừa chọc bạn
-               <br />
-                <p className="time-alert">{moment(datedemo).lang('vi').fromNow()}</p>
+            
             </p>
           }
           secondaryTextLines={2}

@@ -14,6 +14,8 @@ import AccountCircle from 'material-ui-icons/AccountCircle';
 import Search from 'material-ui-icons/Search';
 import Assignment from 'material-ui-icons/Assignment';
 import Update from 'material-ui-icons/Update';
+import Contact from 'material-ui-icons/ContactMail';
+
 import Notifications from 'material-ui-icons/Notifications';
 import Book from 'material-ui-icons/Book';
 
@@ -21,7 +23,7 @@ import Badge from 'material-ui/Badge';
 import IconButton from 'material-ui/IconButton';
 import NotificationsIcon from 'material-ui/svg-icons/social/notifications';
 import RaisedButton from 'material-ui/RaisedButton';
-import {NavLink} from 'react-router-dom'
+import {NavLink,Link} from 'react-router-dom'
 export default class ListExampleNested extends React.Component {
 
   state = {
@@ -81,13 +83,14 @@ export default class ListExampleNested extends React.Component {
             <ListItem primaryText="Trạng thái của cây" leftIcon={<Search />} />
             <Divider />
             <Subheader>Thao tác</Subheader>   
-            <ListItem primaryText="Quản lý cây" leftIcon={<Assignment />} />
+            <ListItem  containerElement={ <Link to="/trees" />}  primaryText="Quản lý cây" leftIcon={<Assignment />} />
             <ListItem primaryText="Cập nhật bản đồ" leftIcon={<Update />} />
-            <ListItem primaryText="Thông báo" leftIcon={<Badge  style={{top: "-22px", left: "-8px"}}
+            <ListItem containerElement={ <Link to="/notification" />} primaryText="Thông báo" leftIcon={<Badge  style={{top: "-22px", left: "-8px"}}
       badgeContent={4}
       primary={true}
     ><Notifications />  </Badge>} />
             <ListItem primaryText="Thống kê/Báo cáo" leftIcon={<Book />} />
+            <ListItem containerElement={ <Link to="/chats" />} primaryText="Liên hệ"  leftIcon={<Contact />} />
 
               {/* <ListItem
               primaryText="Inbox"
