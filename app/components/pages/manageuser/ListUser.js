@@ -3,7 +3,7 @@ import {GridList, GridTile} from 'material-ui/GridList';
 import IconButton from 'material-ui/IconButton';
 import Subheader from 'material-ui/Subheader';
 import StarBorder from 'material-ui/svg-icons/toggle/star-border';
-
+import Notifi from 'app/components/pages/notification/Notification'
 const styles = {
   root: {
     display: 'flex',
@@ -41,6 +41,7 @@ const GridListExampleSimple = () => (
       style={styles.gridList}
     >
       <Subheader>Danh sách nhân viên</Subheader>
+      {/* <Notifi /> */}
       {tilesData.map((tile) => (
         <GridTile
           key={tile.img}

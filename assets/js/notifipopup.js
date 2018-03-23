@@ -3,6 +3,7 @@ $(document).ready(function()
 {
 $("#notificationLink").click(function()
 {
+    console.log('open popup')
 $("#notificationContainer").fadeToggle(300);
 $("#notification_count").fadeOut("slow");
 return false;
@@ -11,6 +12,8 @@ return false;
 //Document Click hiding the popup 
 $(document).click(function()
 {
+    console.log('close popup')
+
 $("#notificationContainer").hide();
 });
 

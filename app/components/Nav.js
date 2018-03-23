@@ -30,7 +30,7 @@ import Divider from 'material-ui/Divider';
 import ListChat from './ListChat'
 
  import { createStore } from 'redux';
-
+import Notification from './pages/notification/Notification'
 
 	class Login extends React.Component {
 	  static muiName = 'FlatButton';
@@ -91,9 +91,9 @@ import ListChat from './ListChat'
         <div >
            
          
+
           <NavLink to={"/"+this.props.username} > <Avatar style={{marginTop:"-15px"}}  src="images/xuan.jpg" /></NavLink>
-          
-                <Popover
+                {/* <Popover
                   open={this.state.open}
                   anchorEl={this.state.anchorEl}
                   anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
@@ -110,9 +110,9 @@ import ListChat from './ListChat'
                     <MenuItem primaryText="Sign out" />
                   </Menu>
              
-                </Popover>
-               {notify}
-             
+                </Popover> */}
+               {/* {notify} */}
+           
           <IconMenu
             
               iconButtonElement={

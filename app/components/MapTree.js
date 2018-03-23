@@ -51,7 +51,7 @@ export default class ListExampleNested extends React.Component {
         /> */}
    {/* <div className="icon-username"><AccountCircle /> </div> */}
                 {/* <div className="user-name">Trịn Đức Bảo Linh </div> */}
-        <div className="col-md-12 menu">
+        <div style={{paddingLeft:"15px",paddingRight:"15px"}} className=" menu">
         <div className="header-menu"><NavLink to="/">BKTree</NavLink></div>
         <div className="account-menu">
          
@@ -70,7 +70,7 @@ export default class ListExampleNested extends React.Component {
 
         </div>
         {/* <hr style={{}} /> */}
-        <Divider />
+        <Divider style={{marginTop:"26px"}} />
         <br />
         <div>
           <List>

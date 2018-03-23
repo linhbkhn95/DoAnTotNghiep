@@ -74,11 +74,12 @@ body{
 }
 .title-page{
     margin-top: 15px;
+    margin-bottom: 23px;
     /* padding-top: 14px; */
     width: 50%;
-    background: #47b747;
-    padding: 5px 0px 5px 5px;
-    /* font-size: 14px; */
+    background: #00bcd4;
+    padding: 7px 0px 6px 5px;
+    font-size: 15px;
     color: white;
     font-weight: bold;
     border-radius: 0px 50px 50px 0px;

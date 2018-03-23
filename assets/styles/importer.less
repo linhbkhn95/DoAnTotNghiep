@@ -47,30 +47,30 @@ position:relative
 }
 #notificationContainer 
 {
-background-color: #fff;
-border: 1px solid rgba(100, 100, 100, .4);
--webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
-overflow: visible;
-position: absolute;
-top: 30px;
-margin-left: -170px;
-width: 400px;
-z-index: 9999; //-1
-display: none; // Enable this after jquery implementation 
+  background-color: #fff;
+  border: 1px solid rgba(100, 100, 100, 0.4);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  overflow: visible;
+  position: absolute;
+  top: 43px;
+  margin-left: -350px;
+  width: 400px;
+  z-index: 9999;
+  display: none; // Enable this after jquery implementation 
 }
 // Popup Arrow
-#notificationContainer:before {
-content: '';
-display: block;
-position: absolute;
-width: 0;
-height: 0;
-color: transparent;
-border: 10px solid black;
-border-color: transparent transparent white;
-margin-top: -20px;
-margin-left: 188px;
-}
+// #notificationContainer:before {
+// content: '';
+// display: block;
+// position: absolute;
+// width: 0;
+// height: 0;
+// color: transparent;
+// border: 10px solid black;
+// border-color: transparent transparent white;
+// margin-top: -20px;
+// margin-left: 188px;
+// }
 #notificationTitle
 {
 font-weight: bold;
@@ -84,7 +84,7 @@ border-bottom: 1px solid #dddddd;
 }
 #notificationsBody
 {
-padding: 33px 0px 0px 0px !important;
+padding: 25px 0px 0px 0px !important;
 min-height:300px;
 }
 #notificationFooter
@@ -96,18 +96,51 @@ padding: 8px;
 font-size: 12px;
 border-top: 1px solid #dddddd;
 }
-
+.avatar-alert {
+  width: 50px;
+  border-radius: 50%;
+  // margin-top: -4px;
+}
+.name-alert{
+  float: left;
+  padding-right: 5px;
+  font-weight: 700;
+  padding-top: 5px;
+}
 #notification_count 
 {
 padding: 3px 7px 3px 7px;
 background: #cc0000;
 color: #ffffff;
 font-weight: bold;
-margin-left: 77px;
+margin-left: 29px;
 border-radius: 9px;
 -moz-border-radius: 9px; 
 -webkit-border-radius: 9px;
 position: absolute;
-margin-top: -11px;
+margin-top: 2px;
 font-size: 11px;
 }
+.alert-message{
+  padding-bottom: 5px;
+  border-bottom: 1px solid #d8d4d4;
+}
+.time-alert{
+  color: #89908e;
+  margin-bottom: 1px !important;
+  font-size: 13px;
+}
+.beeperNub {
+  right: 14px;
+}
+ .beeperNub {
+  background-image: url(/images/hy_YMW55qwy.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 0 -358px;
+  height: 11px;
+  position: absolute;
+  top: -11px;
+  width: 20px;
+}
+

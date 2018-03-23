@@ -20,8 +20,12 @@ var UserHome = require('./UserHome');
 import Maptree from './Map'
 import CreateUser from './pages/manageuser/CreateUser'
 import CreateTree from './pages/managetree/CreateTree'
-
+import TableListUser from './pages/manageuser/TableListUser'
 import ListUser from './pages/manageuser/ListUser'
+import TableListTree from './pages/managetree/TableListTree'
+import Chat from './pages/chat/ListChat'
+import Notification from './pages/notification/ListNotify'
+
  class App extends React.Component{
 
 // require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
@@ -43,7 +47,10 @@ import ListUser from './pages/manageuser/ListUser'
                       <Route  path="/create-tree" component={CreateTree}/>
 
                       <Route  path="/list-user" component={ListUser}/>
-
+                      <Route  path="/users" component={TableListUser}/>
+                      <Route  path="/trees" component={TableListTree}/>
+                      <Route  path="/chats" component={Chat}/>
+                      <Route  path="/notification" component={Notification}/>
                       <Route  path="/eventLog" component={EventLog}/>
                       <Route  path="/dashboard" component={DashBoard}/>
                       <Route  path="/login" component={Login}/>
