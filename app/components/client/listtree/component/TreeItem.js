@@ -1,100 +1,68 @@
+// import React from 'react'
+// import Divider from 'material-ui/Divider';
+import Property from './PropertyTree'
+// class TreeItem extends React.Component{
+//   render(){
+//     return(
+//        <div className="">
+// {/*             
+//           <div >
+//             <img style={{width:"100%",height:"180px"}} src="../images/tree/mit.jpg" />
+//           </div>
+//          <div style={{textAlign:"center"}} > Mit ta : MD222A </div>
+//          <div className="content-detail-tree">
+//             <
 
-
+//          </div> */}
+//          <Property />
+//        </div>
+//       )
+//   }
+// }
+// module.exports = TreeItem;
 import React from 'react';
-import {GridList, GridTile} from 'material-ui/GridList';
-import IconButton from 'material-ui/IconButton';
-import Subheader from 'material-ui/Subheader';
-import StarBorder from 'material-ui/svg-icons/toggle/star-border';
-
+import {Tabs, Tab} from 'material-ui/Tabs';
+import Details from 'material-ui-icons/Details';
+import History from 'material-ui-icons/History';
+import HistoryTree from './History'
 const styles = {
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-  },
-  gridList: {
-    width: 500,
-    height: 450,
-    overflowY: 'auto',
+  headline: {
+    fontSize: 24,
+    paddingTop: 16,
+    marginBottom: 12,
+    fontWeight: 400,
   },
 };
 
-const tilesData = [
-  {
-    img: 'images/tree/bong.jpg',
-    title: 'Bỏng',
-    author: 'Việt Nam',
-  },
-  {
-    img: 'images/tree/dauta.jpg',
-    title: 'Dâu ta',
-    author: 'Việt Nam',
-  },
-  {
-    img: 'images/tree/khe.jpg',
-    title: 'Khế',
-    author: 'Việt Nam',
-  },
-  {
-    img: 'images/tree/dudu.jpg',
-    title: 'Đu đủ',
-    author: 'Thái Lan',
-  },
-  {
-    img: 'images/tree/sung.jpg',
-    title: 'Sung ta',
-    author: 'Việt Nam',
-  },
-  {
-    img: 'images/tree/thanglong.jpg',
-    title: 'Thanh Long',
-    author: 'Lào',
-  },
-  {
-    img: 'images/tree/vaithieu.jpg',
-    title: 'Vải thiều',
-    author: 'Việt Nam',
-  },
-  {
-    img: 'images/tree/mit.jpg',
-    title:'Mít',
-    author: 'Thái Lan',
-  },
-];
+export default class TabsExampleControlled extends React.Component {
 
-/**
- * A simple example of a scrollable `GridList` containing a [Subheader](/#/components/subheader).
- */
-const ListTree = () => (
-  <div style={styles.root}>
-    <GridList
-      cellHeight={180}
-      style={styles.gridList}
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 'a',
+    };
+  }
 
-    >
-      <Subheader>Danh sách cây </Subheader>
-      {tilesData.map((tile) => (
-        <GridTile
-          key={tile.img}
-          title={<div>{tile.title}  <span style={{float:"right",fontSize:"14px"}}>19 cây</span></div>}
-          
-          subtitle={
-                <div>
-                  
-                   <span> Số cây cần tưới: <b>5</b></span>
-                   <br />
-                   <span> nguồn gốc <b>{tile.author}</b></span>
-                </div>
-          }
-          actionIcon={<IconButton><StarBorder color="white" /></IconButton>}
-          containerElement={<div>19 cây</div>}
-        >
-          <img src={tile.img} />
-        </GridTile>
-      ))}
-    </GridList>
-  </div>
-);
+  handleChange = (value) => {
+    this.setState({
+      value: value,
+    });
+  };
 
-  
-  export default ListTree;
+  render() {
+    return (
+      <Tabs
+        value={this.state.value}
+        onChange={this.handleChange}
+      >
+        <Tab       icon={<Details />}
+ label="Thông tin chi tiết" value="a">
+              <Property />
+        </Tab>
+        <Tab  icon={<History />} label="Lịch sử tưới cây" value="b">
+            <HistoryTree />
+        </Tab>
+      </Tabs>
+    );
+  }
+}

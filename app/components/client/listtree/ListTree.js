@@ -10,7 +10,7 @@ import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import moment from 'moment';
 import LinearProgress from 'material-ui/LinearProgress';
-
+import {Link} from 'react-router-dom'
 // import ReactTooltip from 'react-tooltip'
  var date = Date.now();
 var datedemo=1511399642970;
@@ -26,8 +26,9 @@ const iconButtonElement = (
 
 const rightIconMenu = (
   <IconMenu iconButtonElement={iconButtonElement}>
-    <MenuItem>Ẩn</MenuItem>
-    <MenuItem>Xóa</MenuItem>
+    <MenuItem>Tưới cây</MenuItem>
+    <MenuItem  containerElement={ <Link to="/treedetail" ></Link>} > Xem chi tiết </MenuItem>
+    <MenuItem >Gửi phản hồi</MenuItem>
   </IconMenu>
 );
 
@@ -41,18 +42,19 @@ const ListExampleMessages = () => (
         <Subheader>Khế ta</Subheader>
         <ListItem
           leftAvatar={<Avatar src="images/tree/khe.jpg" />}
-        //   primaryText="Nhỏ Ngọc"
+          primaryText={<div style={{fontSize:"13px"}}>Mã cây: SUAA123</div>}
+          rightIconButton={rightIconMenu}
+          style={{height:"100px"}}
           secondaryText={
-            <div>
-            <div>
-              <span style={{color: darkBlack}}>Mã cây: SUAA123</span> 
+            <p style={{height:"42px",fontSize:"13px"}}>
+           
+            Tọa độ: <i> X =12 và Y = 86</i>
          
-              <br />
-              Tọa độ X =12 và Y = 86
-            </div>
+           <br />
+            <div>Tỉ lệ nước </div>
             <LinearProgress mode="determinate" value={80} />
-
-            </div>
+            
+            </p>
           }
           secondaryTextLines={2}
         >
@@ -60,57 +62,29 @@ const ListExampleMessages = () => (
         </ ListItem>
         <Divider inset={true} />
         <ListItem
-          leftAvatar={<Avatar src="https://scontent.fhan5-4.fna.fbcdn.net/v/t1.0-1/p240x240/12565587_584562221695924_8989777346784784785_n.jpg?_nc_cat=0&_nc_eui2=v1%3AAeFwS3gvxxfher6lM1Jc3Wo-QwIwiBu4nNVRJRr6LR70fGDNsZO2Dzs_8qtf8k1f2FsVPHGYp1b31hMgqQ8tFV3NpUINMtkDMKwh4X9kSCzw3w&oh=5b2eb0fa428edec7b89e3dcade7dec62&oe=5B45E24C" />}
-        //   primaryText={
-        //     <p>Phương Anh&nbsp;&nbsp;<span style={{color: lightBlack}}>4</span></p>
-        //   }
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Phương Anh</span> --
-             &apos; vừa cập nhập trang thái cây <span style={{color: darkBlack}}>Hoa Hồng </span>
-            
-            </p>
-          }
-          secondaryTextLines={5}
-        >
-         <span className="time-alert">{moment(date).lang('vi').fromNow()}</span>
-        </ ListItem>
-        <Divider inset={true} />
-        <ListItem
-          leftAvatar={<Avatar src="images/xuan.jpg" />}
-        //   primaryText="Nguyễn xuân"
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Nguyễn Xuân</span> --
-               vừa chọc bạn
-            
-            </p>
-          }
-          secondaryTextLines={2}
-        >
-        <span className="time-alert">{moment(date).lang('vi').fromNow()}</span>
-        </ ListItem>
-      </List>
-    </div>
-    <div>
-      <List>
-        <Subheader>Hôm qua</Subheader>
-        <ListItem
-          leftAvatar={<Avatar src="images/duong.jpg" />}
+          leftAvatar={<Avatar src="images/tree/mit.jpg" />}
+          primaryText={<div style={{fontSize:"13px"}}>Mã cây: SASA3</div>}
           rightIconButton={rightIconMenu}
-        //   primaryText="Đăng Dương"
+          style={{height:"100px"}}
           secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Đăng Dương</span><br />
-              &apos; đã tạo ra cây <span style={{color: darkBlack}}>Xương Rồng</span> mới
+            <p style={{height:"42px",fontSize:"13px"}}>
+           
+            Tọa độ: <i> X =14 và Y = 86</i>
+         
+           <br />
+            <div>Tỉ lệ nước </div>
+            <LinearProgress mode="determinate" value={50} />
+            
             </p>
           }
           secondaryTextLines={2}
         >
-            <span className="time-alert">{moment(datedemo).lang('vi').fromNow()}</span>
-            </ ListItem>
+             <span className="time-alert">Trạng thái: bình thường</span>
+        </ ListItem>
+     
       </List>
     </div>
+    
   </div>
 );
 

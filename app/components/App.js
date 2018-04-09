@@ -27,7 +27,7 @@ import Chat from './pages/chat/ListChat'
 import Notification from './pages/notification/ListNotify'
 import ListTree from './client/listtree/ListGroupTree'
 import ListTreeGroup from './client/listtree/ListTree'
-
+import TreeItem from './client/listtree/component/TreeItem'
  class App extends React.Component{
 
 // require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
@@ -47,6 +47,8 @@ import ListTreeGroup from './client/listtree/ListTree'
                       {/* <Route  path="/maptree" component={Maptree}/> */}
                       <Route  path="/create-user" component={CreateUser}/>
                       <Route  path="/create-tree" component={CreateTree}/>
+                      <Route  path="/treedetail" component={TreeItem}/>
+
                       <Route  path="/list-tree" component={ListTree}/>
                       <Route  path="/list-tree-group" component={ListTreeGroup}/>
                       <Route  path="/list-user" component={ListUser}/>

@@ -5,7 +5,8 @@ import {GridList, GridTile} from 'material-ui/GridList';
 import IconButton from 'material-ui/IconButton';
 import Subheader from 'material-ui/Subheader';
 import StarBorder from 'material-ui/svg-icons/toggle/star-border';
-
+import ViewList from 'material-ui-icons/RemoveRedEye';
+import {Link } from 'react-router-dom'
 const styles = {
   root: {
     display: 'flex',
@@ -76,6 +77,7 @@ const ListTree = () => (
       <Subheader>Danh sách cây </Subheader>
       {tilesData.map((tile) => (
         <GridTile
+        
           key={tile.img}
           title={<div>{tile.title}  <span style={{float:"right",fontSize:"14px"}}>19 cây</span></div>}
           
@@ -87,8 +89,9 @@ const ListTree = () => (
                    <span> nguồn gốc <b>{tile.author}</b></span>
                 </div>
           }
-          actionIcon={<IconButton><StarBorder color="white" /></IconButton>}
-          containerElement={<div>19 cây</div>}
+          actionIcon={<IconButton containerElement={ <Link to="/list-tree-group" />}><ViewList  color="white" /></IconButton>}
+          // containerElement={<div>19 cây</div>}
+          containerElement={ <Link to="/list-tree-group" >19 cây </Link>}
         >
           <img src={tile.img} />
         </GridTile>
